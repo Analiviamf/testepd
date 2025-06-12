@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Feliz Dia dos Namorados 💖</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #ffb6c1, #ffe4e1);
+      overflow-x: hidden;
+      text-align: center;
+    }
+
+    #start-screen {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: white;
+      z-index: 9999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .caixa-container {
+      position: relative;
+      width: 350px; /* tamanho da caixa */
+      height: 350px;
+    }
+
+    .caixa-img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    }
+
+    .botao-caixa {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 18px 40px;
+      font-size: 1.4em;
+      background-color: rgba(255, 105, 180, 0.85);
+      border: none;
+      color: white;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(230, 0, 115, 0.7);
+      transition: background-color 0.3s ease;
+    }
+
+    .botao-caixa:hover {
+      background-color: #e60073;
+    }
+
+    /* Conteúdo principal (escondido inicialmente) */
+    #conteudo {
+      display: none;
+    }
+
+    /* O resto do seu estilo pode continuar aqui... */
+    h1 {
+      color: #e60073;
+      margin-top: 20px;
+    }
+
+    .mensagem {
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 15px;
+      width: 80%;
+      max-width: 600px;
+      font-size: 1.2em;
+      box-shadow: 0 0 10px #aaa;
+      display: none;
+    }
+
+    .mostrar-mensagem {
+      display: block !important;
+    }
+
+    .carousel-container {
+      overflow: hidden;
+      width: 100%;
+      max-width: 100vw;
+      height: 300px;
+      margin: 30px auto;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      background-color: #ffe4e1;
+      position: relative;
+    }
+
+    .carousel-track {
+      display: flex;
+      align-items: center;
+      animation: scroll 40s linear infinite;
+      width: max-content;
+    }
+
+    .carousel-track img {
+      height: auto;
+      width: auto;
+      max-height: 280px;
+      max-width: 100%;
+      object-fit: contain;
+      margin-right: 15px;
+      background-color: #ffe4e1;
+      border-radius: 10px;
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    .musica {
+      margin: 30px auto;
+    }
+
+    audio {
+      border-radius: 10px;
+      box-shadow: 0 0 10px #aaa;
+    }
+
+    .botao-cartinha {
+      padding: 12px 25px;
+      background-color: #e60073;
+      color: white;
+      font-size: 1em;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Tela inicial -->
+  <div id="start-screen">
+    <div class="caixa-container">
+      <img src="vector-4699584_1920.png" alt="Caixa de Presente" class="caixa-img" />
+      <button class="botao-caixa" onclick="abrirPresente()">Clique aqui 🎁</button>
+    </div>
+  </div>
+
+  <!-- Conteúdo principal -->
+  <div id="conteudo">
+
+    <h1>Feliz Dia dos Namorados! 💘</h1>
+
+    <button class="botao-cartinha" onclick="mostrarMensagem()">Cartinha do seu amor 💌</button>
+
+    <div class="mensagem" id="mensagem">
+      <p>Também não poderia deixar passar em branco o nosso primeiro Dia dos Namorados — ou quase namorados, haha!
+        Meu amor, essa é apenas uma forma singela de te mostrar o quanto eu te amo. Sou imensamente grata a Deus por ter nos aproximado novamente, depois de tantas idas e vindas.
+        Dessa vez, sinto que o nosso “pra sempre” finalmente chegou. Quero comemorar essa data ao teu lado para o resto da minha vida — seja como quase namorados, namorados, noivos ou casados.
+        A cada dia, você me faz sentir que é a minha maior certeza em meio a tantas dúvidas que carrego comigo.
+      Eu te amo demais, meu bem. 💖</p>
+    </div>
+
+    <div class="carousel-container">
+      <div class="carousel-track">
+        <img src="IMG-20250611-WA0038.jpg" alt="nós dois" />
+        <img src="IMG-20250611-WA0106.jpg" alt="nós dois" />
+        <img src="IMG-20250611-WA0107.jpg" alt="nós dois" />
+        <img src="IMG-20250611-WA0108.jpg" alt="nós dois" />
+        <img src="IMG-20250611-WA0109.jpg" alt="nós dois" />
+        <img src="IMG-20250611-WA0110.jpg" alt="nós dois" />
+        <img src="IMG-20250611-WA0111.jpg" alt="nós dois" />
+        <img src="IMG-20250611-WA0112.jpg" alt="nós dois" />
+        <img src="IMG-20250611-WA0113.jpg" alt="nós dois" />
+        <img src="IMG-20250611-WA0114.jpg" alt="nós dois" />
+        <img src="IMG-20250611-WA0116.jpg" alt="nós dois" />
+        <img src="IMG-20250611-WA0117.jpg" alt="nós dois" />
+        <img src="IMG-20250611-WA0118.jpg" alt="nós dois" />
+        <img src="IMG-20250611-WA0119.jpg" alt="nós dois" />
+        <img src="IMG-20250611-WA0120.jpg" alt="nós dois" />
+        <img src="IMG-20250611-WA0121.jpg" alt="nós dois" />
+        <img src="IMG-20250611-WA0122.jpg" alt="nós dois" />
+        <img src="IMG-20250611-WA0123.jpg" alt="nós dois" />
+        <img src="IMG-20250611-WA0124.jpg" alt="nós dois" />
+        <img src="IMG-20250611-WA0125.jpg" alt="nós dois" />
+        <img src="IMG-20250611-WA0126.jpg" alt="nós dois" />
+        <img src="IMG-20250611-WA0127.jpg" alt="nós dois" />
+        <img src="IMG-20250611-WA0038.jpg" alt="nós dois" />
+        <img src="IMG-20250611-WA0106.jpg" alt="nós dois" />
+        <img src="IMG-20250611-WA0107.jpg" alt="nós dois" />
+        <img src="IMG-20250611-WA0108.jpg" alt="nós dois" />
+        <img src="IMG-20250611-WA0109.jpg" alt="nós dois" />
+        <img src="IMG-20250611-WA0110.jpg" alt="nós dois" />
+        <img src="IMG-20250611-WA0111.jpg" alt="nós dois" />
+        <img src="IMG-20250611-WA0112.jpg" alt="nós dois" />
+        <img src="IMG-20250611-WA0113.jpg" alt="nós dois" />
+        <img src="IMG-20250611-WA0114.jpg" alt="nós dois" />
+        <img src="IMG-20250611-WA0116.jpg" alt="nós dois" />
+        <img src="IMG-20250611-WA0117.jpg" alt="nós dois" />
+        <img src="IMG-20250611-WA0118.jpg" alt="nós dois" />
+        <img src="IMG-20250611-WA0119.jpg" alt="nós dois" />
+        <img src="IMG-20250611-WA0120.jpg" alt="nós dois" />
+        <img src="IMG-20250611-WA0121.jpg" alt="nós dois" />
+        <img src="IMG-20250611-WA0122.jpg" alt="nós dois" />
+        <img src="IMG-20250611-WA0123.jpg" alt="nós dois" />
+        <img src="IMG-20250611-WA0124.jpg" alt="nós dois" />
+        <img src="IMG-20250611-WA0125.jpg" alt="nós dois" />
+        <img src="IMG-20250611-WA0126.jpg" alt="nós dois" />
+        <img src="IMG-20250611-WA0127.jpg" alt="nós dois" />
+      </div>
+    </div>
+
+    <div class="musica">
+      <h2>Esse encontro, nós dois, esse amor.💞</h2>
+      <audio controls autoplay loop>
+        <source src="ainda-bem.mp3" type="audio/mpeg" />
+        Seu navegador não suporta áudio HTML5.
+      </audio>
+    </div>
+
+  </div>
+
+  <script>
+    function abrirPresente() {
+      document.getElementById('start-screen').style.display = 'none';
+      document.getElementById('conteudo').style.display = 'block';
+    }
+
+    function mostrarMensagem() {
+      document.getElementById('mensagem').classList.toggle('mostrar-mensagem');
+    }
+  </script>
+
+</body>
+</html>
